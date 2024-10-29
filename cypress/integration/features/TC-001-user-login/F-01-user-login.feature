@@ -1,0 +1,14 @@
+#
+# author Zainab Abbasi
+# Dated: 24/09/2024
+#
+
+Feature: User Login
+    @user-login @smoke-front-end @regression
+    Scenario: Verify that user is able to login in the application on entring valid credentials
+        Given I go to application
+        When I enter valid email
+        And I enter valid password
+        And I click on login button
+        And Application home page opens successfully
+        Then Logout from the Application

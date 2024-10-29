@@ -1,0 +1,5 @@
+cypress/cucumber-json/**
+cypress/cucumber-report/**
+cypress/cucumber-html-report.js 
+cypress/report.js
+cypress/DataFiles/**
