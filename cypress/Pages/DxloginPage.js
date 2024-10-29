@@ -29,7 +29,7 @@ class Login {
       cy.get("button.MuiButtonBase-root").click({ force: true });
       cy.wait(100);
       cy.get("li.MuiButtonBase-root").eq(1).click({ force: true });
-      cy.wait(200);
+      //cy.wait(200);
     }
   }
   export default Login;
