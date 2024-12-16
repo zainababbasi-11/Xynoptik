@@ -1,0 +1,19 @@
+{
+    "env": {
+        "app-url": "https://dev.aourix.com/",
+        "add-product-url":"https://dev.aourix.com/products",
+        "email": "qa@aourix.com",
+        "password": "Aourix@123",
+        "product_name":"Livea Rose",
+        "product_description":"Livea Rose",
+        "product_family":"Baby Soap",
+
+        "dxapp-url": "https://staging.dxyfer.com/login",
+        "dxemail": "stagedx2@yopmail.com",
+        "dxpassword": "Dxy@@!!11",
+        "signupemail": "userabc@yopmail.com",
+        "dxfirstname": "user",
+        "dxLastname": "xyz",
+        "dxsignupurl": "https://staging.dxyfer.com/signup"
+    }
+}

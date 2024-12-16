@@ -1,0 +1,71 @@
+{
+  "name": "@dpw/dpw-cargoes-automation-suite",
+  "version": "1.0.0",
+  "description": "This package contains Automation Pack for dpw cargoes",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules\\.bin\\cypress run --reporter mochawesome ",
+    "headTest": "node_modules\\.bin\\cypress run --reporter mochawesome --headed",
+    "tagTest": "node_modules\\.bin\\cypress-tags run --headed",
+    "headlessTest": "node_modules\\.bin\\cypress-tags run",
+    "backendTest": "node_modules\\.bin\\cypress-tags run --headless",
+    "open": "node_modules\\.bin\\cypress open",
+    "get-report": "node ./cypress/report.js",
+    "build": "node_modules\\.bin\\cypress.cmd install --force",
+    "lint": "eslint  \"cypress/**/*.js\"",
+    "format": "prettier --write \"./**/*.{js,json}\"",
+    "precommit": "lint-staged"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true
+    }
+  },
+  "author": "Zainab Abbasi",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "7.7.0",
+    "cypress-cucumber-preprocessor": "^4.1.2",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-real-events": "^1.5.1",
+    "eslint": "^7.31.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.25.1",
+    "husky": "^4.3.7",
+    "lint-staged": "^10.5.3",
+    "mocha": "^9.0.0",
+    "multiple-cucumber-html-reporter": "^1.18.0",
+    "prettier": "^2.3.2"
+  },
+  "dependencies": {
+    "cypress-iframe": "^1.0.1",
+    "cypress-real-events": "^1.5.1",
+    "cypress-xpath": "^1.6.2",
+    "faker": "^5.5.3",
+    "fs-extra": "^9.1.0",
+    "moment": "^2.29.1",
+    "mongodb": "^3.6.10",
+    "mongoose": "^5.13.5",
+    "unique-names-generator": "^4.6.0",
+    "yargs": "^16.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js}": [
+      "prettier --write",
+      "eslint \"cypress/**/*.js\" --fix"
+    ],
+    "*.js": "eslint \"cypress/**/*.js\" --cache --fix",
+    "*.{js}": "prettier --write"
+  }
+}
