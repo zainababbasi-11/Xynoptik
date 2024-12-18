@@ -12,9 +12,13 @@
         "dxapp-url": "https://staging.dxyfer.com/login",
         "dxemail": "stagedx2@yopmail.com",
         "dxpassword": "Dxy@@!!11",
-        "signupemail": "userabc@yopmail.com",
+        "signupemail": "@ic5wt9e6.mailosaur.net",
         "dxfirstname": "user",
         "dxLastname": "xyz",
-        "dxsignupurl": "https://staging.dxyfer.com/signup"
+        "dxsignupurl": "https://staging.dxyfer.com/signup",
+
+
+        "mailosaurApiKey": "oENlVr2etdhVp4YBhRxo8eoHuYMOwzTs",
+        "mailosaurServerId": "ic5wt9e6"
     }
 }

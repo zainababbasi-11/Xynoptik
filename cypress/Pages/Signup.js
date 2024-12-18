@@ -5,74 +5,54 @@
  * @author Zainab Abbasi
  * Dated: 04/10/2024
  */
-
 class Signup {
-    clickSignuphereButton() {
-      cy.get('a[href="/signup"]').click({ force: true });
-      cy.wait(1000);
-    }
-    enterUseremail(strEmail) {
-      cy.get("input[id='email']").type(strEmail);
-    }
-    
-    enterFirstName(strEmail) {
-      cy.get("input[id='given_name']").type(strEmail);
-    }
+	clickSignuphereButton() {
+		cy.get('a[href="/signup"]').click({ force: true });
+		cy.wait(1000);
+	}
 
-    enterLastName(strEmail) {
-      cy.get("input[id='family_name']").type(strEmail);
-    }
-
-    enterPassword(strPassword) {
-      cy.get("input[id='password']").type(strPassword);
-    }
-    
-    clickSignupButtonEmail() {
-      cy.get("form#submit-form") // Target the form by ID
-      .find("button[type='submit']") // Find the submit button inside the form
-      .click(); // Perform the click action
-      cy.wait(1000);
-    }
-/*    
-  
-
-    clickcheckbox() {
-      //cy.get("button[type='submit']").click({ force: true });
-      cy.get('a[href="/signup"]').click({ force: true });
-      cy.wait(1000);
-    }
-
-    
-
-
-    entercode(strPassword) {
-      cy.get("input[id='password']").type(strPassword);
-    }
-  
-
-    clickVerifyButton() {
-      cy.get("button[type='submit']").click({ force: true });
-      cy.wait(5000);
-    }
-
-
-  
-    enterPassword(strPassword) {
-      cy.get("input[id='password']").type(strPassword);
-    }
-
-    clickLoginButton() {
-      cy.get("button[type='submit']").click({ force: true });
-      cy.wait(5000);
-    }
-
-
-    clickLogOut() {
-      cy.get("button.MuiButtonBase-root").click({ force: true });
-      cy.wait(100);
-      cy.get("li.MuiButtonBase-root").eq(1).click({ force: true });
-      cy.wait(200);
-    }*/
+	enterUseremail(strEmail) {
+		cy.get("input[id='email']").type(strEmail);
+	}
+	
+	enterFirstName(strEmail) {
+		cy.get("input[id='given_name']").type(strEmail);
+	}
+	
+	enterLastName(strEmail) {
+		cy.get("input[id='family_name']").type(strEmail);
+	}
+	
+	enterPassword(strPassword) {
+		cy.get("input[id='password']").type(strPassword);
+	}
+	
+	clickSignupButtonEmail() {
+		cy.get("form#submit-form") // Target the form by ID
+		.find("button[type='submit']") // Find the submit button inside the form
+		.click(); // Perform the click action
+		cy.wait(1000);
+	}
+	
+	enterSignupCode(strCode) {
+		cy.get("input[id='code']").type(strCode);
+	}
+	
+	clickVerifyButton() {
+		cy.get("button[type='submit']").click({ force: true });
+		cy.wait(5000);
+	}
+	
+	clickLoginButton() {
+		cy.get("button[type='submit']").click({ force: true });
+		cy.wait(10000);
+	}
+	
+	clickLogOut() {
+		cy.get("#arrowKey").click({ force: true });
+		cy.wait(100);
+		cy.get("div.profile-modal").find("p").contains("Sign out").click({ force: true });
+		cy.wait(200);
+	}
 }
-  export default Signup;
-  
+export default Signup;

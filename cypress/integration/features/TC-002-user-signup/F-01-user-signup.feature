@@ -20,5 +20,6 @@ Feature: User Signup
         And I enter correct verification code
         And I click on verify account
         And I navigate to login screen
-        And I login to New User
+        And I enter password of new user
+        And I click on login button
         Then Logout from the Application
