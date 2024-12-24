@@ -19,6 +19,13 @@
 
 
         "mailosaurApiKey": "oENlVr2etdhVp4YBhRxo8eoHuYMOwzTs",
-        "mailosaurServerId": "ic5wt9e6"
+        "mailosaurServerId": "ic5wt9e6",
+
+
+    "exprojectname":"ExcelProject",
+    "exprojectdescription":"ExcelProjectDescription",
+    "exprojecttag":"ExcelProjectTag"
+
+
     }
 }
