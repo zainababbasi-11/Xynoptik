@@ -89,9 +89,9 @@ class  Datasource{
       // cy.get('ul').contains('li', 'Microsoft\ Excel')
 
       cy.get('.relative.flex.flex-col.w-full.group')
-  .contains('Microsoft Excel')
-  .should('be.visible')
-  .click();
+      .contains('Microsoft Excel')
+      .should('be.visible')
+      .click();
 
        cy.get("button[type='button']").contains('Next').click({ force: true });
 
@@ -105,13 +105,22 @@ class  Datasource{
 
       //next step
 
-      cy.get("input[id='ag-15-input']").click({ force: true });
+    //  cy.get("input[id='ag-15-input']").click({ force: true });
+   // cy.get('.form-group input[type="checkbox"]').eq(0).check();
+
+      cy.get('input[type="checkbox"]').first().check();
+
+
 
        cy.get("button[type='button']").contains('Next').click({ force: true });
 
 //next step
-       cy.get("button[type='button']").contains('Next').click({ force: true });
+      cy.get("button[type='button']").contains('Next').click({ force: true });
+      cy.wait(10000);
+      cy.get('#data-source-date-time-format-modal ').should('be.visible').click({ force: true });
 
+
+      //cy.contains('span', 'Ok').click();
 
 
 
