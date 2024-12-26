@@ -4,7 +4,7 @@
 #
 
 Feature: Datasource
-@user-signin @smoke-front-end @regression
+@smoke-front-end @regression @Datasource
     Scenario: Verify that user is able to login in the application and Add a Datasource project
             Given I go to application 
             When I login to application 
@@ -14,6 +14,5 @@ Feature: Datasource
             And I click on Add Datasource
             And I add excel project details
             And click on Next
-            And I Choose a Datasource Excel and click on Next
-            
+            And I Choose a Datasource Excel and create
 
