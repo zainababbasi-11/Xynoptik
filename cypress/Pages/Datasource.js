@@ -38,9 +38,9 @@ class  Datasource{
       enterexcelprojectname(strname){
 
         cy.get("input[id='sourceName']").type(strname); 
-        //cy.get("textarea[id='description']").type(strdetail); 
+        // cy.get("textarea[id='description']").type(strdetail); 
        // cy.get("input[text='.react-tagsinput-input']").type(strdetail); 
-       //cy.get('input.react-tagsinput-input[placeholder="Add a tag"]').type(strdetail);
+       // cy.get('input.react-tagsinput-input[placeholder="Add a tag"]').type(strdetail);
 
 
       }
@@ -84,7 +84,7 @@ class  Datasource{
 
       // cy.get('.relative flex flex-col w-full group:contains("Microsoft Excel")').click();
 
-       //class="relative flex flex-col w-full group"
+       // class="relative flex flex-col w-full group"
 
       // cy.get('ul').contains('li', 'Microsoft\ Excel')
 
@@ -103,7 +103,7 @@ class  Datasource{
 
       // cy.get('.ag-input-field-input ag-checkbox-input').contains("#ag-15-input").click({ force: true });  
 
-      //next step
+      // next step
 
     //  cy.get("input[id='ag-15-input']").click({ force: true });
    // cy.get('.form-group input[type="checkbox"]').eq(0).check();
@@ -114,15 +114,21 @@ class  Datasource{
 
        cy.get("button[type='button']").contains('Next').click({ force: true });
 
-//next step
+// next step
       cy.get("button[type='button']").contains('Next').click({ force: true });
       cy.wait(10000);
-      cy.get('#data-source-date-time-format-modal ').should('be.visible').click({ force: true });
+      // cy.get('#data-source-date-time-format-modal ').should('be.visible').click({ force: true });
 
+      cy.get('#data-source-date-time-format-modal') // Locate the modal by its ID
+      .should('be.visible') // Ensure the modal is visible
+      .find('button') // Find the button inside the modal
+      .contains('Ok') // Locate the button with the "Ok" text
+      .should('not.be.disabled') // Ensure the button is enabled
+      .click(); // Click the button
+      // cy.contains('span', 'Ok').click();
 
-      //cy.contains('span', 'Ok').click();
-
-
+      // Next Step
+      cy.get("button[type='button']#next").contains('Next').click({ force: true });
 
       }
 

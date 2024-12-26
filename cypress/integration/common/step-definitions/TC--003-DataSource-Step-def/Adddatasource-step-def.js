@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { Given, When, And, Then } from "cypress-cucumber-preprocessor/steps";
+import { Given, When, And } from "cypress-cucumber-preprocessor/steps";
 import DataSource from "../../../../Pages/Datasource";
 
 
@@ -21,11 +21,11 @@ Given("I go to application and login", () => {
 
     Datasource.enteremail(Cypress.env("dxemail"));
     Datasource.enterpassword(Cypress.env("dxpassword"));
-    //Datasource.clickLoginButton();
+    // Datasource.clickLoginButton();
   });
 
   And("Home page opens successfully", () => {
-    //cy.url().should("include", "/home/dashboard");
+    // cy.url().should("include", "/home/dashboard");
   });
   
 
