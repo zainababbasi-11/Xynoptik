@@ -15,4 +15,11 @@ Feature: Datasource
             And I add excel project details
             And click on Next
             And I Choose a Datasource Excel and create
-
+            And Project create successfully
+            Then I Logout
+    
+    Scenario: Verify that user is able to login in the application and Add a Datasource database project
+            Given I login to application and Click on Datasource
+            And I click on Add Datasource Button
+            And I Add DB project details
+            And I Select Database Project and Add Database credentials

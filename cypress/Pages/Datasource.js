@@ -16,9 +16,17 @@ class  Datasource{
     enterpassword(strPassword){
 
         cy.get("input[id='password']").type(strPassword);
+        //cy.get("button[type='submit']").click({ force: true });
+        //cy.wait(10000);
+ 
+      }
+
+      clicklogin(){
+
         cy.get("button[type='submit']").click({ force: true });
         cy.wait(10000);
- 
+
+
       }
      
       clickDatasource() {
@@ -66,7 +74,7 @@ class  Datasource{
 
       }
 
-      clickfirstnext(){
+      clicknext(){
 
        cy.get("button[type='button']").contains('Next').click({ force: true });
 
@@ -131,6 +139,66 @@ class  Datasource{
       cy.get("button[type='button']#next").contains('Next').click({ force: true });
 
       }
+
+      clickLogout() {
+        cy.get("#arrowKey").click({ force: true });
+        cy.wait(100);
+        cy.get("div.profile-modal").find("p").contains("Sign out").click({ force: true });
+        cy.wait(200);
+      }
+
+
+      selectdbproject(){
+
+        cy.get('.relative.flex.flex-col.w-full.group')
+        .contains('MariaDB')
+        .should('be.visible')
+        .click();
+  
+         cy.get("button[type='button']").contains('Next').click({ force: true });
+
+         //cy.get('#hostname').type();
+
+      }
+
+      adddbcredshostname(){
+
+        cy.get('#hostname').type('dxyfer-demo-mariadb.ce0fxmvpvtvi.ap-southeast-2.rds.amazonaws.com');
+
+
+
+      }
+      adddbcredsport(strportnum){
+
+        cy.get('#port').type(strportnum);
+
+      }
+
+      adddbcredsusername(strdbusername){
+
+        cy.get('#username').type(strdbusername);
+
+      }
+      adddbcredspass(strdbpass){
+
+        cy.get('#password').type(strdbpass);
+
+      }
+      adddbname(strdbname){
+
+
+        cy.get('#database').type(strdbname);
+
+      }
+
+      clickconnect(){
+
+
+        cy.get("button[type='submit']").contains('Connect').click({ force: true });
+
+      }
+
+
 
 
 }

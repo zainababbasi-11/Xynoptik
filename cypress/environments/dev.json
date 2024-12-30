@@ -24,8 +24,17 @@
 
     "exprojectname":"ExcelProject",
     "exprojectdescription":"ExcelProjectDescription",
-    "exprojecttag":"ExcelProjectTag"
+    "exprojecttag":"ExcelProjectTag",
 
+    "dbprojectname":"DBProject",
+    "dbprojectdescription":"DBProjectDescription",
+    "dbprojecttag":"DBProjectTag",
+
+    "dbhsotname":"dxyfer-demo-mariadb.ce0fxmvpvtvi.ap-southeast-2.rds.amazonaws.com",
+    "dbport":"3306",
+    "dbusername":"demo",
+    "dbpass":"dxyfer123",
+    "dbname":"FranceAccidents"
 
     }
 }
