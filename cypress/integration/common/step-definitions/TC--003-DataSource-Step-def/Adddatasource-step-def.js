@@ -6,13 +6,11 @@ import DataSource from "../../../../Pages/Datasource";
 
 const Datasource = new DataSource();
 
-Given("I go to application and login", () => {
+Given("I go to application", () => {
     cy.log(Cypress.env("dxapp-url"));
     cy.visit(Cypress.env("dxapp-url"));
 
     cy.wait(1000);
-
-   
     
   });
 
