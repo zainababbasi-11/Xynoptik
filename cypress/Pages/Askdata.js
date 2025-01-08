@@ -23,7 +23,7 @@ class Askdata {
     
     clickaskdata() {
         cy.contains('span', 'Ask Data').click();
-        cy.wait(10000);
+        cy.wait(5000);
     }
     
     clickcreatenewtopic() {
@@ -39,8 +39,12 @@ class Askdata {
         cy.get('input[role="combobox"]') // Locate the combobox input
         .type('DBProject{enter}'); 
         
-        cy.get('#topicName').type('DPProejct');
+        cy.get('#topicName').type('DBProject1');
         cy.get('#save').click({force: true});
+    }
+
+    clickedOnRecentProject() {
+        cy.get('div#DBProject1').first().click();
     }
 }
 export default Askdata;

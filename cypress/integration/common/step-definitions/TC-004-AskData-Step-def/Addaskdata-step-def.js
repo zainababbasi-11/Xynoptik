@@ -34,3 +34,7 @@ And("I Select Source and Add Topic Name", () => {
 Then("AskData Project created successfully", () => {
 	cy.log("Project Created Successfully");
 })
+
+Given("I click on new project created",() => {
+	askdataobj.clickedOnRecentProject();
+});
