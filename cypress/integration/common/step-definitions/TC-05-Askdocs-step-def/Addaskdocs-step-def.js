@@ -48,7 +48,7 @@ Given("I login", () => {
 
      And("I Add Project details", ()=> {
 
-      //AskDocobj.clicknewproject();
+      // AskDocobj.clicknewproject();
 
       AskDocobj.askdocprojectname(Cypress.env("askdocname"));
       AskDocobj.askdocprojectdescription(Cypress.env("askdocdesc"));

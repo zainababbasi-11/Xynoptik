@@ -18,9 +18,9 @@ When("I enter invalid email", () => {
   login.enterUserName('qaa@yopmail.com');
 });
 
-/*And("I click on continue button", () => {
+/* And("I click on continue button", () => {
   login.clickLoginButtonEmail();
-});*/
+}); */
 
 And("I enter valid password", () => {
   login.enterPassword(Cypress.env("dxpassword"));

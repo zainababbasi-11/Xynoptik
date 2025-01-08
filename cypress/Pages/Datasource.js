@@ -16,8 +16,8 @@ class  Datasource{
     enterpassword(strPassword){
 
         cy.get("input[id='password']").type(strPassword);
-        //cy.get("button[type='submit']").click({ force: true });
-        //cy.wait(10000);
+        // cy.get("button[type='submit']").click({ force: true });
+        // cy.wait(10000);
  
       }
 
@@ -157,7 +157,7 @@ class  Datasource{
   
          cy.get("button[type='button']").contains('Next').click({ force: true });
 
-         //cy.get('#hostname').type();
+         // cy.get('#hostname').type();
 
       }
 
@@ -168,6 +168,7 @@ class  Datasource{
 
 
       }
+
       adddbcredsport(strportnum){
 
         cy.get('#port').type(strportnum);
@@ -179,11 +180,13 @@ class  Datasource{
         cy.get('#username').type(strdbusername);
 
       }
+
       adddbcredspass(strdbpass){
 
         cy.get('#password').type(strdbpass);
 
       }
+
       adddbname(strdbname){
 
 

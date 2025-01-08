@@ -19,12 +19,12 @@ Given("I go to application", () => {
 
     Datasource.enteremail(Cypress.env("dxemail"));
     Datasource.enterpassword(Cypress.env("dxpassword"));
-    //Datasource.clickLoginButton();
+    // Datasource.clickLoginButton();
     Datasource.clicklogin();
   });
 
   And("Home page opens successfully", () => {
-    //cy.url().should("include", "/home/dashboard");
+    // cy.url().should("include", "/home/dashboard");
   });
   
 
@@ -81,13 +81,13 @@ Then("I Logout",() => {
 
 });
 
-//create database project
+// create database project
 
 Given("I login to application and Click on Datasource", () =>{
 
   Datasource.enteremail(Cypress.env("dxemail"));
   Datasource.enterpassword(Cypress.env("dxpassword"));
-  //Datasource.clickLoginButton();
+  // Datasource.clickLoginButton();
   Datasource.clicklogin();
 
   // Go to Datasource
