@@ -12,4 +12,4 @@ Feature: Askdata
             And I click on AskData
             And AskData page open successfully
             And I click on Create New Topic
-            
+            And I Select Source and Add Topic Name

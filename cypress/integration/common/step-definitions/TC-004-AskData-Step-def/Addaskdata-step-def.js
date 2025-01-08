@@ -38,3 +38,23 @@ When("I login to an application", () => {
 
 
     });
+
+    
+    And("AskData page open successfully", () => {
+      // cy.url().should("include", "/home/dashboard");
+    });
+
+    
+    And("I click on Create New Topic", () => {
+
+
+      askdataobj.clickcreatenewtopic();
+
+  });
+
+  And("I Select Source and Add Topic Name", () =>{
+
+    askdataobj.selectsource();
+
+
+  });
