@@ -34,7 +34,12 @@
     "dbport":"3306",
     "dbusername":"demo",
     "dbpass":"dxyfer123",
-    "dbname":"FranceAccidents"
+    "dbname":"FranceAccidents",
+
+    "askdocname": "TestProject",
+    "askdocdesc": "TestProject",
+    "askdoctag": "TestProject"
+
 
     }
 }

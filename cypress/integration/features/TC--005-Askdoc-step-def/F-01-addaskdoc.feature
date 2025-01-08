@@ -9,5 +9,5 @@ Feature: Askdoc
             Given I login 
             When I go to Askdocs
             And Askdocs page opens successfully
-            And I click on +New Projec
+            And I click on +New Project
             And I Add Project details
