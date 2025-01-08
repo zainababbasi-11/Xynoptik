@@ -5,79 +5,44 @@
  * @author Zainab Abbasi
  * Dated: 08/01/2025
  */
-
-
-
-class Askdoc{
-
+class Askdoc {
+    
     enteremail(strEmail) {
         cy.get("input[id='email']").type(strEmail); 
     }
-
-    enterpassword(strPassword){
-
+    
+    enterpassword(strPassword) {
         cy.get("input[id='password']").type(strPassword);
- 
-      }
-
-      clicklogin(){
-
+    }
+    
+    clicklogin() {
         cy.get("button[type='submit']").click({ force: true });
         cy.wait(10000);
-      }
-
-      clickaskdoc(){
-
+    }
+    
+    clickaskdoc() {
         cy.contains('span', 'Ask Docs').click();
         cy.wait(10000);
-      }
-
-
-      clicknewproject(){
-
+    }
+    
+    clicknewproject() {
         cy.get("#new-docs").click({force: true });
-
-
-
-      }
-
-    askdocprojectname(strprjctname){
-
+    }
+    
+    askdocprojectname(strprjctname) {
         cy.get("input[id='projectName']").type(strprjctname);
-
     }
-
-    askdocprojectdescription(strprjctdes){
-
-        cy.get("input[id='projectDescription']").type(strprjctdes);
-
-
+    
+    askdocprojectdescription(strprjctdes) {
+        cy.get("textarea[id='projectDescription']").type(strprjctdes);
     }
-
-    askdocprojecttag(strprjcttag){
-
-     //   cy.get("input[id='projectDescription']").type(strprjcttag);
-
-     cy.get('input.react-tagsinput-input[placeholder="Add a tag"]').type(strprjcttag);
-
-
-
-
+    
+    askdocprojecttag(strprjcttag) {
+        cy.get('input.react-tagsinput-input[placeholder="Add a tag"]').type(strprjcttag);
     }
-
-
-    clicknext(){
-
+    
+    clicknext() {
         cy.get("button[type='button']").contains('Next').click({ force: true });
- 
-       //  cy.contains('span', 'Next').click();
- 
- 
-       }
- 
- 
- 
-
-
+    }
 }
 export default Askdoc;

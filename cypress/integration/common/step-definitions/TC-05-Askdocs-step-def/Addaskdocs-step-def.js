@@ -9,51 +9,34 @@ const AskDocobj = new AskDoc();
 Given("I login", () => {
     cy.log(Cypress.env("dxapp-url"));
     cy.visit(Cypress.env("dxapp-url"));
-
     cy.wait(1000);
-
+    
     AskDocobj.enteremail(Cypress.env("dxemail"));
-      AskDocobj.enterpassword(Cypress.env("dxpassword"));
-      // Datasource.clickLoginButton();
-      AskDocobj.clicklogin();
+    AskDocobj.enterpassword(Cypress.env("dxpassword"));
+    AskDocobj.clicklogin();
+});
 
-    
-  });
-
-   When("I go to Askdocs", () => {
-
+When("I go to Askdocs", () => {
     AskDocobj.clickaskdoc();
-
     AskDocobj.clicknewproject();
-  
+});
+
+And("Askdocs page opens successfully", ()=> {
     
-    });
+});
 
-    And("Askdocs page opens successfully", ()=> {
+And("I click on +New Project", ()=> {
+    AskDocobj.clicknewproject();
+});
 
+And("I click on +New Project", ()=> {
+    AskDocobj.clicknewproject();
+});
 
-     });
-
-    And("I click on +New Project", ()=> {
-
-      AskDocobj.clicknewproject();
-
-     });
-
-     And("I click on +New Project", ()=> {
-
-      AskDocobj.clicknewproject();
-
-     });
-
-     And("I Add Project details", ()=> {
-
-      // AskDocobj.clicknewproject();
-
-      AskDocobj.askdocprojectname(Cypress.env("askdocname"));
-      AskDocobj.askdocprojectdescription(Cypress.env("askdocdesc"));
-
-      AskDocobj.askdocprojecttag(Cypress.env("askdoctag"));
-      AskDocobj.clicknext();     
-
-     });
+And("I Add Project details", ()=> {
+    
+    AskDocobj.askdocprojectname(Cypress.env("askdocname"));
+    AskDocobj.askdocprojectdescription(Cypress.env("askdocdesc"));
+    AskDocobj.askdocprojecttag(Cypress.env("askdoctag"));
+    AskDocobj.clicknext();
+});
