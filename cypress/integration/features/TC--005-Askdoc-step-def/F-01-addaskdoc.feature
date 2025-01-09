@@ -12,7 +12,7 @@ Feature: Askdoc
             And I click on +New Project
             And I Add Project details and click on next
             And I select PDF option and click on next
-            And Project created successfully
+            Then Project created successfully
 
 
 

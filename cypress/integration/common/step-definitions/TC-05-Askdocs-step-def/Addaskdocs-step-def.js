@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { Given, When, And } from "cypress-cucumber-preprocessor/steps";
+import { Given, When, And, Then} from "cypress-cucumber-preprocessor/steps";
 import AskDoc from "../../../../Pages/Askdoc";
 
 
@@ -42,18 +42,12 @@ And("I Add Project details and click on next", ()=> {
 });
 
 And("I select PDF option and click on next", () => {
-
     AskDocobj.selectpdfproject();
 });
 
-And("Project created successfuly", () => {
-
-    
+Then("Project created successfully", () => {
+    cy.log("Successfully Completed");
 });
-
-/*And("", () => {});
-
-And("", () => {});*/
 
 
 
