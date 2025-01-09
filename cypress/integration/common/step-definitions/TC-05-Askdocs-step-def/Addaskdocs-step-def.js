@@ -33,10 +33,27 @@ And("I click on +New Project", ()=> {
     AskDocobj.clicknewproject();
 });
 
-And("I Add Project details", ()=> {
+And("I Add Project details and click on next", ()=> {
     
     AskDocobj.askdocprojectname(Cypress.env("askdocname"));
     AskDocobj.askdocprojectdescription(Cypress.env("askdocdesc"));
     AskDocobj.askdocprojecttag(Cypress.env("askdoctag"));
     AskDocobj.clicknext();
 });
+
+And("I select PDF option and click on next", () => {
+
+    AskDocobj.selectpdfproject();
+});
+
+And("Project created successfuly", () => {
+
+    
+});
+
+/*And("", () => {});
+
+And("", () => {});*/
+
+
+
