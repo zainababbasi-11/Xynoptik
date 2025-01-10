@@ -36,6 +36,10 @@ Then("AskData Project created successfully", () => {
 })
 
 Given("I login and go to AskData",() => {
+    
+	cy.log(Cypress.env("dxapp-url"));
+	cy.visit(Cypress.env("dxapp-url"));
+	cy.wait(1000);
 	askdataobj.enteremail(Cypress.env("dxemail"));
 	askdataobj.enterpassword(Cypress.env("dxpassword"));
 	askdataobj.clicklogin();

@@ -38,13 +38,24 @@ class Askdata {
          
         cy.get('input[role="combobox"]') // Locate the combobox input
         .type('DBProject{enter}'); 
-        
-        cy.get('#topicName').type('DBProject1');
+        cy.wait(20000);
+        cy.get('#topicName').type('DBProject');
         cy.get('#save').click({force: true});
     }
 
     clickedOnRecentProject() {
-        cy.get('div#DBProject1').first().click();
+        cy.get('div#DBProject').first().click();
+        cy.wait(20000);
+        //data-source-info-modal
+ 
+        cy.get('#data-source-info-modal') // Locate the modal by its ID
+       .should('be.visible') // Ensure the modal is visible
+       .find('button') // Find the button inside the modal
+       .contains('Ok') // Locate the button with the "Ok" text
+       .should('not.be.disabled') // Ensure the button is enabled
+       .click() 
+       // cy.get('button#ok').should('be.visible').click({ force: true });
+
     }
 }
 export default Askdata;
