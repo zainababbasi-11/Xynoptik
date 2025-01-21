@@ -61,23 +61,23 @@ class Askdoc {
 
        cy.wait(10000);
 
-       /*cy.get('#title') // Locate the modal by its ID
+       /* cy.get('#title') // Locate the modal by its ID
        .should('be.visible') // Ensure the modal is visible
        .find('button') // Find the button inside the modal
        .contains('Ok') // Locate the button with the "Ok" text
        .should('not.be.disabled') // Ensure the button is enabled
        .click() */
-       //cy.get('button#ok').should('be.visible').click({ force: true });
+       // cy.get('button#ok').should('be.visible').click({ force: true });
 
        cy.get("button[type='button']").contains('Next').click({ force: true });
 
-       //cy.get('button#ok').should('be.visible').click({ force: true });
+       // cy.get('button#ok').should('be.visible').click({ force: true });
 
        cy.wait(20000);
 
        cy.get('button#ok').should('be.visible').click({ force: true });
 
-       /*cy.get('#title') // Locate the modal by its ID
+       /* cy.get('#title') // Locate the modal by its ID
        .should('be.visible') // Ensure the modal is visible
        .find('button') // Find the button inside the modal
        .contains('Ok') // Locate the button with the "Ok" text
