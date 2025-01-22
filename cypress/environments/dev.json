@@ -22,24 +22,27 @@
         "mailosaurServerId": "ic5wt9e6",
 
 
-    "exprojectname":"ExcelProject",
-    "exprojectdescription":"ExcelProjectDescription",
-    "exprojecttag":"ExcelProjectTag",
+        "exprojectname":"ExcelProject",
+        "exprojectdescription":"ExcelProjectDescription",
+        "exprojecttag":"ExcelProjectTag",
 
-    "dbprojectname":"DBProject",
-    "dbprojectdescription":"DBProjectDescription",
-    "dbprojecttag":"DBProjectTag",
+        "dbprojectname":"DBProject",
+        "dbprojectdescription":"DBProjectDescription",
+        "dbprojecttag":"DBProjectTag",
 
-    "dbhsotname":"dxyfer-demo-mariadb.ce0fxmvpvtvi.ap-southeast-2.rds.amazonaws.com",
-    "dbport":"3306",
-    "dbusername":"demo",
-    "dbpass":"dxyfer123",
-    "dbname":"FranceAccidents",
+        "dbhsotname":"dxyfer-demo-mariadb.ce0fxmvpvtvi.ap-southeast-2.rds.amazonaws.com",
+        "dbport":"3306",
+        "dbusername":"demo",
+        "dbpass":"dxyfer123",
+        "dbname":"FranceAccidents",
 
-    "askdocname": "TestProject",
-    "askdocdesc": "TestProject",
-    "askdoctag": "TestProject"
+        "askdocname": "TestProject",
+        "askdocdesc": "TestProject",
+        "askdoctag": "TestProject",
 
+        "dashboardName":"Test Dashboard",
+        "dashboardDescription":"This Dashboard is use for testing",
+        "dashboardTag":"Testing Dash"
 
     }
 }
