@@ -36,3 +36,14 @@ And("I Add Dashboard details and click on next", () => {
     autoDashObj.enterDashboardTags(Cypress.env("dashboardTag"));
     autoDashObj.clicknext();
 });
+
+And("I choose a project and add graph or widget", () => {
+	autoDashObj.clickrecentproject();
+});
+
+And("project created successfully ", () => {
+	autoDashObj.clicknext();
+	autoDashObj.clicknext();
+	cy.wait();
+	
+});

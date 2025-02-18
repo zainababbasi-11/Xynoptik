@@ -13,5 +13,7 @@ Feature: Autdash
         And I go to Auto Dash
         And I click on Add New Dashboard
         And I Add Dashboard details and click on next
+        And I choose a project and add graph or widget
+        And project created successfully
 
         
