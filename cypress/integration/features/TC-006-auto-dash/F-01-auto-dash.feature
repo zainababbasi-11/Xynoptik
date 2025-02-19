@@ -15,5 +15,8 @@ Feature: Autdash
         And I Add Dashboard details and click on next
         And I choose a project and add graph or widget
         And project created successfully
+        And i select graph from list
+        Then I should see the dashboard created successfully
+
 
         

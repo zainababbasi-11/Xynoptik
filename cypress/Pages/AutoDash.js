@@ -47,30 +47,22 @@ class AutoDash {
 
 
 
-    clickrecentproject(){
-
-        cy.get('div#FranceAccidents').first().click();
-        cy.wait(20000);
-        // cy.get('button#ok').should('be.visible').click({ force: true });
-        cy.get('body').then(($body) => {
-            if ($body.find('#data-source-info-modal').length > 0) {
-                // If the modal exists, ensure it's visible
-                cy.get('#data-source-info-modal', { timeout: 15000 }).should('be.visible');
-                // Find the 'OK' button inside the modal and click it
-                cy.get('#data-source-info-modal button#ok').click({ force: true });
-            } else {
-                // Log a message when the modal is not found
-                cy.log('Modal not found, continuing without clicking OK. This modal might not open on subsequent visits.');
-            }
-        });
-
+    clickrecentproject() {
+        cy.intercept('POST', '/api/dashboard/get-graphs').as('submitData');
+        cy.get('div#select-menu').click().type('FranceAccidents{enter}');
         cy.get("button[type='button']").contains('Next').click({ force: true });
-
-
+        this.clicknext();
+        cy.wait('@submitData').its('response.statusCode').should('eq', 200);
     }
 
     selectgraph(){
+        cy.get('div#checkbox').first().click();
+        cy.get("button[type='button']").contains('Next').click({ force: true });
+        cy.wait(4000);
+        cy.get("button[id='save']").click({ force: true });
 
+        cy.wait(4000);
+        cy.get("button[id='save']").click({ force: true });
 
     }
 

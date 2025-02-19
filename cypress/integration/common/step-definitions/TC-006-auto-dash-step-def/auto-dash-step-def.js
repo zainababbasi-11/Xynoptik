@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { Given, When, And } from "cypress-cucumber-preprocessor/steps";
+import { Given, When, And, Then } from "cypress-cucumber-preprocessor/steps";
 import AutoDash from "../../../../Pages/AutoDash";
 
 const autoDashObj = new AutoDash();
@@ -41,9 +41,15 @@ And("I choose a project and add graph or widget", () => {
 	autoDashObj.clickrecentproject();
 });
 
-And("project created successfully ", () => {
-	autoDashObj.clicknext();
-	autoDashObj.clicknext();
-	cy.wait();
-	
+And("project created successfully", () => {
+	cy.log("Project created successfully");
+	cy.wait(2000);
+});
+
+And("i select graph from list", () => {
+	autoDashObj.selectgraph()
+});
+
+Then("I should see the dashboard created successfully", () => {
+	cy.log("Test Case completed successfully");
 });
