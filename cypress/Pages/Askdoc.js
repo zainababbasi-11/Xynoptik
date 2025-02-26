@@ -57,7 +57,7 @@ class Askdoc {
 
        cy.get("#upload-file").click({force: true });
 
-       cy.get('input[type="file"]').attachFile('samplepdf.pdf');
+       cy.get('input[type="file"]').attachFile('file-example_PDF_1MB.pdf');
 
        cy.wait(10000);
 
@@ -85,5 +85,30 @@ class Askdoc {
        .click() */
 
     }
+
+    clickedOnRecentProjectaskdoc() {
+        cy.get('div#TestProject').first().click();
+        cy.wait(20000);
+        // cy.get('button#ok').should('be.visible').click({ force: true });
+        cy.get('body').then(($body) => {
+            if ($body.find('#data-source-info-modal').length > 0) {
+                // If the modal exists, ensure it's visible
+                cy.get('#data-source-info-modal', { timeout: 15000 }).should('be.visible');
+                // Find the 'OK' button inside the modal and click it
+                cy.get('#data-source-info-modal button#ok').click({ force: true });
+            } else {
+                // Log a message when the modal is not found
+                cy.log('Modal not found, continuing without clicking OK. This modal might not open on subsequent visits.');
+            }
+        });
+    }
+
+
+    writeAndSubmitQueryaskdoc() {
+        cy.get("input[id='data-questions']").type("Accident trends over the years"); 
+
+        cy.get('div#send').should('be.visible').click({ force: true });
+    }
+
 }
 export default Askdoc;

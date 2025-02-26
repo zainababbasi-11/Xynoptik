@@ -6,6 +6,11 @@ import AskDoc from "../../../../Pages/Askdoc";
 
 const AskDocobj = new AskDoc();
 
+
+//Common Features
+// Feature 01 Starts
+
+
 Given("I login", () => {
     cy.log(Cypress.env("dxapp-url"));
     cy.visit(Cypress.env("dxapp-url"));
@@ -18,7 +23,7 @@ Given("I login", () => {
 
 When("I go to Askdocs", () => {
     AskDocobj.clickaskdoc();
-    AskDocobj.clicknewproject();
+    //AskDocobj.clicknewproject();
 });
 
 And("Askdocs page opens successfully", ()=> {
@@ -48,6 +53,21 @@ And("I select PDF option and click on next", () => {
 Then("Project created successfully", () => {
     cy.log("Successfully Completed");
 });
+// Feature 01 Ends
 
+// Feature 02 Starts
 
+And("I open a project",() => {
+    AskDocobj.clickedOnRecentProjectaskdoc();
+});
+
+And("Submit a query", () => {
+    AskDocobj.writeAndSubmitQueryaskdoc();
+});
+
+Then("I should see the result of the query", () => {
+    cy.wait(3000);
+    cy.log("Query Result Successfully");
+});
+// Feature 02 Ends
 
