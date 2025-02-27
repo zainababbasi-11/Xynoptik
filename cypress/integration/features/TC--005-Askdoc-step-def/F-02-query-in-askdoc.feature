@@ -10,6 +10,6 @@ Feature: Askdoc
         When I go to Askdocs
         And Askdocs page opens successfully
         And I open a project
-        And Submit a query
+        And Submit a query askdocs
         Then I should see the result of the query
         

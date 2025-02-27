@@ -61,7 +61,7 @@ And("I open a project",() => {
     AskDocobj.clickedOnRecentProjectaskdoc();
 });
 
-And("Submit a query", () => {
+And("Submit a query askdocs", () => {
     AskDocobj.writeAndSubmitQueryaskdoc();
 });
 

@@ -73,7 +73,7 @@ class Askdoc {
 
        // cy.get('button#ok').should('be.visible').click({ force: true });
 
-       cy.wait(20000);
+       cy.wait(10000);
 
        cy.get('button#ok').should('be.visible').click({ force: true });
 
@@ -87,8 +87,8 @@ class Askdoc {
     }
 
     clickedOnRecentProjectaskdoc() {
-        cy.get('div#TestProject').first().click();
-        cy.wait(20000);
+        cy.get('div#card-info ').first().click();
+        cy.wait(10000);
         // cy.get('button#ok').should('be.visible').click({ force: true });
         cy.get('body').then(($body) => {
             if ($body.find('#data-source-info-modal').length > 0) {
@@ -105,7 +105,7 @@ class Askdoc {
 
 
     writeAndSubmitQueryaskdoc() {
-        cy.get("input[id='data-questions']").type("Accident trends over the years"); 
+        cy.get("input[id='docs-question']").type("Lorem ipsum dolor sit amet, consectetur adipisc"); 
 
         cy.get('div#send').should('be.visible').click({ force: true });
     }
